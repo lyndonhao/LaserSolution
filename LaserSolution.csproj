@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F5286FFA-CE21-4147-9EA4-8F1960C36C00}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LaserSolution</RootNamespace>
+    <AssemblyName>LaserSolution</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>packages\NLog.4.7.10\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="PCHMI">
+      <HintPath>lib\PCHMI.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SunnyUI">
+      <HintPath>bin\x64\Debug\SunnyUI.dll</HintPath>
+    </Reference>
+    <Reference Include="SunnyUI.Common">
+      <HintPath>bin\x64\Debug\SunnyUI.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InstructParm\frm_PointParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InstructParm\frm_PointParam.Designer.cs">
+      <DependentUpon>frm_PointParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operate\Frm_Operate_Frames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operate\Frm_Operate_Frames.Designer.cs">
+      <DependentUpon>Frm_Operate_Frames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operate\Frm_Operate_Status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operate\Frm_Operate_Status.Designer.cs">
+      <DependentUpon>Frm_Operate_Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Arc_Param.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Arc_Param.Designer.cs">
+      <DependentUpon>Frm_Arc_Param.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Diagnosis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Diagnosis.Designer.cs">
+      <DependentUpon>Frm_Diagnosis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Help.Designer.cs">
+      <DependentUpon>Frm_Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_keyboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_keyboard.Designer.cs">
+      <DependentUpon>Frm_keyboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_LineParam_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_LineParam_Edit.Designer.cs">
+      <DependentUpon>Frm_LineParam_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_LoadPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_LoadPage.Designer.cs">
+      <DependentUpon>Frm_LoadPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Main.Designer.cs">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Rotate_Param.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Rotate_Param.Designer.cs">
+      <DependentUpon>Frm_Rotate_Param.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_SpecailProgramEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_SpecailProgramEdit.Designer.cs">
+      <DependentUpon>Frm_SpecailProgramEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_NumPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_NumPad.Designer.cs">
+      <DependentUpon>Frm_NumPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Operate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Operate.Designer.cs">
+      <DependentUpon>Frm_Operate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Processing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Processing.Designer.cs">
+      <DependentUpon>Frm_Processing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Production.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Production.Designer.cs">
+      <DependentUpon>Frm_Production.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Program.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Program.Designer.cs">
+      <DependentUpon>Frm_Program.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_SelectJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_SelectJob.Designer.cs">
+      <DependentUpon>Frm_SelectJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Setting.Designer.cs">
+      <DependentUpon>Frm_Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_SufeceOnAixsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_SufeceOnAixsEdit.Designer.cs">
+      <DependentUpon>Frm_SufeceOnAixsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ShapeOnCylinderEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ShapeOnCylinderEdit.Designer.cs">
+      <DependentUpon>Frm_ShapeOnCylinderEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionKey.cs" />
+    <Compile Include="GlobalData.cs" />
+    <Compile Include="HOME.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HOME.Designer.cs">
+      <DependentUpon>HOME.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Message.cs" />
+    <Compile Include="MyLogger.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RMContol.cs" />
+    <Compile Include="SystemIOMap.cs" />
+    <Compile Include="Zmcaux.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InstructParm\frm_PointParam.resx">
+      <DependentUpon>frm_PointParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operate\Frm_Operate_Status.resx">
+      <DependentUpon>Frm_Operate_Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Diagnosis.resx">
+      <DependentUpon>Frm_Diagnosis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Help.resx">
+      <DependentUpon>Frm_Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_keyboard.resx">
+      <DependentUpon>Frm_keyboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_LineParam_Edit.resx">
+      <DependentUpon>Frm_LineParam_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_LoadPage.resx">
+      <DependentUpon>Frm_LoadPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Main.resx">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Rotate_Param.resx">
+      <DependentUpon>Frm_Rotate_Param.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_SpecailProgramEdit.resx">
+      <DependentUpon>Frm_SpecailProgramEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_NumPad.resx">
+      <DependentUpon>Frm_NumPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Operate.resx">
+      <DependentUpon>Frm_Operate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Processing.resx">
+      <DependentUpon>Frm_Processing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Production.resx">
+      <DependentUpon>Frm_Production.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Program.resx">
+      <DependentUpon>Frm_Program.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_SelectJob.resx">
+      <DependentUpon>Frm_SelectJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Setting.resx">
+      <DependentUpon>Frm_Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_SufeceOnAixsEdit.resx">
+      <DependentUpon>Frm_SufeceOnAixsEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ShapeOnCylinderEdit.resx">
+      <DependentUpon>Frm_ShapeOnCylinderEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HOME.resx">
+      <DependentUpon>HOME.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.manifest" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="img\线.png" />
+    <None Include="img\9圆弧线.png" />
+    <None Include="img\149_多边形缓冲.png" />
+    <None Include="img\B-曲面图.png" />
+    <None Include="img\点.png" />
+    <None Include="img\电机.png" />
+    <None Include="img\加工-01.png" />
+    <None Include="img\矩形.png" />
+    <None Include="img\矩形查询.png" />
+    <None Include="img\历史曲线.png" />
+    <None Include="img\喷水.png" />
+    <None Include="img\曲线.png" />
+    <None Include="img\三点画圆弧.png" />
+    <None Include="img\线段圆.png" />
+    <None Include="img\延时.png" />
+    <None Include="img\仪表盘.png" />
+    <None Include="img\圆.png" />
+    <None Include="img\圆点.png" />
+    <None Include="img\圆环.png" />
+    <None Include="img\圆角.png" />
+    <None Include="img\圆圈.png" />
+    <None Include="img\圆心画圆弧.png" />
+    <None Include="img\耐磨带.jpg" />
+    <None Include="img\矩形绿色.png" />
+    <None Include="img\矩形灰色.png" />
+    <None Include="img\轴类.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\Frames\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\连接red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\连接green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\播放.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\暂停.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\手动.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\自动.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\自动1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\手动1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\停止.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\自动绿色.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\自动对应.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\停止黑色.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\停止方图.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\急停.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\激光yello.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\激光报警.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\激光使能.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\送粉中.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\送粉异常.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\报错.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\警告信号l.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\维修_保养.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\维修养护.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\故障.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\指引红光.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\激光报警1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\对.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tools\Tools.csproj">
+      <Project>{6bce2697-ff24-4238-a424-ad61a8cd47f2}</Project>
+      <Name>Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
